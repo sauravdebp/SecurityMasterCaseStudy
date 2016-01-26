@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\bin\Debug\SecurityMaster.dll
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\bin\Debug\SecurityMaster.pdb
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\obj\Debug\SecurityMaster.dll
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\obj\Debug\SecurityMaster.pdb
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\obj\Debug\SecMaster_DAL.csprojResolveAssemblyReference.cache
+=======
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\bin\Debug\SecurityMaster.dll
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\bin\Debug\SecurityMaster.pdb
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\obj\Debug\SecurityMaster.dll
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\obj\Debug\SecurityMaster.pdb
+>>>>>>> d8d99c8664bc70dd201c54174935749111937d8c
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityMaster\obj\Debug\SecMaster_DAL.csprojResolveAssemblyReference.cache

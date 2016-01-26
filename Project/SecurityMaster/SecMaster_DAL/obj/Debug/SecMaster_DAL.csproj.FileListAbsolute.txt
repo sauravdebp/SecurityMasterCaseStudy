@@ -1,0 +1,4 @@
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecMaster_DAL\bin\Debug\SecMaster_DAL.dll
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecMaster_DAL\bin\Debug\SecMaster_DAL.pdb
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Debug\SecMaster_DAL.dll
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Debug\SecMaster_DAL.pdb

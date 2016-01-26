@@ -1,0 +1,9 @@
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Release\ConsoleApplication1.exe
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Release\ConsoleApplication1.pdb
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Release\SecMaster_DAL.dll
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Release\SecMaster_DAL.pdb
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.exe
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.pdb
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Release\SecurityReader.dll
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Release\SecurityReader.pdb

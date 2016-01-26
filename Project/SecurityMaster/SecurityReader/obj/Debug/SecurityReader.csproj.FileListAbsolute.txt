@@ -1,0 +1,14 @@
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\bin\Debug\SecurityReader.dll
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\bin\Debug\SecurityReader.pdb
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\bin\Debug\SecurityMaster.dll
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\bin\Debug\SecurityMaster.pdb
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\obj\Debug\SecurityReader.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\obj\Debug\SecurityReader.dll
+C:\Users\admin\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\obj\Debug\SecurityReader.pdb
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\bin\Debug\SecurityReader.dll
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\bin\Debug\SecurityReader.pdb
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\bin\Debug\SecMaster_DAL.dll
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\bin\Debug\SecMaster_DAL.pdb
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\obj\Debug\SecurityReader.dll
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\obj\Debug\SecurityReader.pdb
+C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecurityReader\obj\Debug\SecurityReader.csprojResolveAssemblyReference.cache
