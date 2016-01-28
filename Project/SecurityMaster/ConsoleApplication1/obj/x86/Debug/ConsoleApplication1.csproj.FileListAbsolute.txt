@@ -26,3 +26,11 @@ C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\ConsoleApp
 C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
 C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
 C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\SecMaster_DAL.dll
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\SecurityReader.dll
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\SecMaster_DAL.pdb
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Debug\SecurityReader.pdb
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

@@ -17,13 +17,14 @@ namespace ConsoleApplication1
             DAL lib = DAL.getDbInstance();
             Console.WriteLine("STARTING....");
 
-            SecurityReader.SecurityReader reader = new SecurityReader.SecurityReader();
-            //List<Security> securities = reader.ReadSecuritiesFromFile(@"C:\Users\saura_000\Downloads\Equities.xlsx");
-            List<Security> securities = reader.ReadSecuritiesFromFile(@"C:\Users\admin\Desktop\SecMaster\Equities.xlsx");
+            //SecurityReader.SecurityReader reader = new SecurityReader.SecurityReader();
+            ////List<Security> securities = reader.ReadSecuritiesFromFile(@"C:\Users\saura_000\Downloads\Equities.xlsx");
+            //List<Security> securities = reader.ReadSecuritiesFromFile(@"C:\Users\admin\Desktop\SecMaster\Equities.xlsx");
 
-            lib.OpenConnection();
-            lib.InsertSecurity(securities);
-            lib.CloseConnection();
+            //lib.OpenConnection();
+            //lib.InsertSecurity(securities);
+            //lib.CloseConnection();
+            lib.SelectSecurity(new Equity() { SecurityId = 1 });
 
             Console.WriteLine("DONE");
             Console.ReadKey();

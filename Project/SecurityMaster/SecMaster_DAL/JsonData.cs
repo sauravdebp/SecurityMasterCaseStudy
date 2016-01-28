@@ -28,7 +28,7 @@ namespace SecMaster_DAL
     {
         public string AttributeDisplayName { get; set; }
         public string AttributeRealName { get; set; }
-        public string AttributeValue { get; set; }
+        public Object AttributeValue { get; set; }
         public string AttributeType { get; set; }
     }
 }

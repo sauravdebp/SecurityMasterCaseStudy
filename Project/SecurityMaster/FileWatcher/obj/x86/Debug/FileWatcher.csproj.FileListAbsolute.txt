@@ -10,3 +10,15 @@ C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatche
 C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Debug\FileWatcher.exe
 C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Debug\FileWatcher.pdb
 C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\bin\Debug\FileWatcher.exe.config
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\bin\Debug\FileWatcher.exe.config
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\bin\Debug\FileWatcher.exe
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\bin\Debug\FileWatcher.pdb
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\bin\Debug\SecMaster_DAL.dll
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\bin\Debug\SecurityReader.dll
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\bin\Debug\SecMaster_DAL.pdb
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\bin\Debug\SecurityReader.pdb
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Debug\FileWatcher.csprojResolveAssemblyReference.cache
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Debug\FileWatcher.ProjectInstaller.resources
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Debug\FileWatcher.csproj.GenerateResource.Cache
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Debug\FileWatcher.exe
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Debug\FileWatcher.pdb

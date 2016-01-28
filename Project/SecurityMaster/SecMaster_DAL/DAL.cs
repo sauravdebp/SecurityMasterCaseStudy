@@ -10,15 +10,16 @@ using System.Xml.Serialization;
 using SecMaster_DAL.DataModel;
 using System.Xml;
 using System.Web;
+using System.Web.Script.Serialization;
 
 namespace SecMaster_DAL
 {
     public class DAL
     {
         private static DAL dbInstance;
-        private readonly SqlConnection conn = new SqlConnection(@"Data Source=ADMIN-PC;Initial Catalog=SecurityMaster;Integrated Security=True;");
+        //private readonly SqlConnection conn = new SqlConnection(@"Data Source=ADMIN-PC;Initial Catalog=SecurityMaster;Integrated Security=True;");
+        private readonly SqlConnection conn = new SqlConnection(@"Data Source=saurav-pc\sqlexpress;Initial Catalog=SecurityMaster;Integrated Security=True");
         SqlCommand command;
-        StringBuilder json;
         SqlDataAdapter dataAdapt;
 
         private DAL() { }
@@ -111,8 +112,8 @@ namespace SecMaster_DAL
             dataAdapt.SelectCommand = command;
             DataTable dataTable = new DataTable();
             dataAdapt.Fill(dataTable);
-            string json = ConvertToJson(dataTable, securityObject);
-
+           string json= ConvertToJson(dataTable, securityObject);
+            return json;
         }
 
         public string ConvertToJson(DataTable datatable, Security securityObject)
@@ -126,17 +127,27 @@ namespace SecMaster_DAL
             dataAdapt.SelectCommand = command;
             DataTable dataTable = new DataTable();
             dataAdapt.Fill(dataTable);
-            //Dictionary<string, List<JsonDataAttributes>> dict = new Dictionary<string, List<JsonDataAttributes>>();
-            JsonData data=new JsonData();
+            Dictionary<string, List<JsonDataAttributes>> dict = new Dictionary<string, List<JsonDataAttributes>>();
             foreach(DataRow row in dataTable.Rows)
             {
                 string tabName=(string)row["TabName"];
-                data.Tabs.Add(new JsonDataTab()
+                if (!dict.ContainsKey(tabName))
                 {
-                    TabName = tabName
+                    dict.Add(tabName, new List<JsonDataAttributes>());
+                }
+                dict[tabName].Add(new JsonDataAttributes()
+                {
+                    AttributeDisplayName = (string)row["AttributeDisplayName"],
+                    AttributeRealName = (string)row["AttributeRealName"],
+                    AttributeValue = datatable.Rows[0][(string)row["AttributeRealName"]]
                 });
-
             }
+
+            JavaScriptSerializer serializer = new JavaScriptSerializer(); //creating serializer instance of JavaScriptSerializer class
+
+            //first way
+            string json = serializer.Serialize((object)dict);
+            return json;
         }
 
 

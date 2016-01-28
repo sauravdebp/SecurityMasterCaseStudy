@@ -19,3 +19,10 @@ C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecurityRe
 C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecurityReader\obj\Debug\SecurityReader.csprojResolveAssemblyReference.cache
 C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecurityReader\obj\Debug\SecurityReader.dll
 C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecurityReader\obj\Debug\SecurityReader.pdb
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\bin\Debug\SecurityReader.dll
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\bin\Debug\SecurityReader.pdb
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\bin\Debug\SecMaster_DAL.dll
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\bin\Debug\SecMaster_DAL.pdb
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\obj\Debug\SecurityReader.csprojResolveAssemblyReference.cache
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\obj\Debug\SecurityReader.dll
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\obj\Debug\SecurityReader.pdb
