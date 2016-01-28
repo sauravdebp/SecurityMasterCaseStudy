@@ -1,0 +1,11 @@
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\bin\Release\FileWatcher.exe
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\bin\Release\FileWatcher.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\bin\Release\SecMaster_DAL.dll
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\bin\Release\SecurityReader.dll
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\bin\Release\SecMaster_DAL.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\bin\Release\SecurityReader.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Release\FileWatcher.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Release\FileWatcher.ProjectInstaller.resources
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Release\FileWatcher.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Release\FileWatcher.exe
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Release\FileWatcher.pdb

@@ -11,6 +11,7 @@ namespace FileWatcherService
 {
     public partial class Service1 : ServiceBase
     {
+        //FileWatcher watcher;
         public Service1()
         {
             InitializeComponent();
@@ -18,10 +19,12 @@ namespace FileWatcherService
 
         protected override void OnStart(string[] args)
         {
+            //watcher = new FileWatcher(@"C:\Users\admin\Desktop", "*.xlsx");
         }
 
         protected override void OnStop()
         {
+            //watcher.StopFileWatcher();
         }
     }
 }

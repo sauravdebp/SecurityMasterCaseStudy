@@ -3,3 +3,9 @@ C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\FileWatcherService\b
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\FileWatcherService\obj\x86\Debug\FileWatcherService.csprojResolveAssemblyReference.cache
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\FileWatcherService\obj\x86\Debug\FileWatcherService.exe
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\FileWatcherService\obj\x86\Debug\FileWatcherService.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcherService\bin\Debug\FileWatcherService.exe
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcherService\bin\Debug\FileWatcherService.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcherService\obj\x86\Debug\FileWatcherService.exe
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcherService\obj\x86\Debug\FileWatcherService.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcherService\obj\x86\Debug\FileWatcherService.ProjectInstaller.resources
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcherService\obj\x86\Debug\FileWatcherService.csproj.GenerateResource.Cache

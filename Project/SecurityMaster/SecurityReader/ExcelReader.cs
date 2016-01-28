@@ -55,6 +55,7 @@ namespace SecurityReader
 
 
         //Below function is to generate an INSERT query for filling up the SecurityAttributes Table. This was created temporarily only.
+        //Params: row - Any row from the excel file
         //public void FillAttributes_temp(Dictionary<string, string> row)
         //{
         //    SqlConnection conn = new SqlConnection(@"Data Source=saurav-pc\sqlexpress;Initial Catalog=SecurityMaster;Integrated Security=True");

@@ -2,3 +2,8 @@ C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecMaster_DAL\bin\De
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecMaster_DAL\bin\Debug\SecMaster_DAL.pdb
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Debug\SecMaster_DAL.dll
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Debug\SecMaster_DAL.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecMaster_DAL\bin\Debug\SecMaster_DAL.dll
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecMaster_DAL\bin\Debug\SecMaster_DAL.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Debug\SecMaster_DAL.dll
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Debug\SecMaster_DAL.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Debug\SecMaster_DAL.csprojResolveAssemblyReference.cache

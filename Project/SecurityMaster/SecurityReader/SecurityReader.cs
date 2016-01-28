@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SecMaster_DAL.DataModel;
+using SecMaster_DAL;
 
 namespace SecurityReader
 {
@@ -33,7 +34,7 @@ namespace SecurityReader
                 reader.CloseFile();
 
                 //Convert the complex dictionary to a list of security objects
-                Dictionary<string, string> attributeMapping = new SecMaster_DAL.DAL().GetAtrributeMappings(GetSecurityObject(securityName).GetType().Name);
+                Dictionary<string, string> attributeMapping = DAL.getDbInstance().GetAtrributeMappings(GetSecurityObject(securityName).GetType().Name);
                 foreach (var securityRow in securitiesData[securityName])
                 {
                     securities.Add(FillSecurityObject(GetSecurityObject(securityName), securityRow, attributeMapping));

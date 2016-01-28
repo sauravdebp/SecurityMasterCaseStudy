@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{6BFCB9B6-464A-4FED-A946-88235D4C8816}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileWatcherService", "FileWatcherService\FileWatcherService.csproj", "{4B120955-3644-48F2-9134-99B2F669EBF9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityReader", "SecurityReader\SecurityReader.csproj", "{E22263D2-BED8-40BD-9ACA-1BCD3838BA67}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecMaster_DAL", "SecMaster_DAL\SecMaster_DAL.csproj", "{3ABEAF6C-164C-4DE2-BF24-58C8A48A8C24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileWatcher", "FileWatcher\FileWatcher.csproj", "{8DF2233B-0C71-4274-BCB5-9EA044A4EB75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,16 +29,6 @@ Global
 		{6BFCB9B6-464A-4FED-A946-88235D4C8816}.Release|Mixed Platforms.Build.0 = Release|x86
 		{6BFCB9B6-464A-4FED-A946-88235D4C8816}.Release|x86.ActiveCfg = Release|x86
 		{6BFCB9B6-464A-4FED-A946-88235D4C8816}.Release|x86.Build.0 = Release|x86
-		{4B120955-3644-48F2-9134-99B2F669EBF9}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{4B120955-3644-48F2-9134-99B2F669EBF9}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{4B120955-3644-48F2-9134-99B2F669EBF9}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{4B120955-3644-48F2-9134-99B2F669EBF9}.Debug|x86.ActiveCfg = Debug|x86
-		{4B120955-3644-48F2-9134-99B2F669EBF9}.Debug|x86.Build.0 = Debug|x86
-		{4B120955-3644-48F2-9134-99B2F669EBF9}.Release|Any CPU.ActiveCfg = Release|x86
-		{4B120955-3644-48F2-9134-99B2F669EBF9}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{4B120955-3644-48F2-9134-99B2F669EBF9}.Release|Mixed Platforms.Build.0 = Release|x86
-		{4B120955-3644-48F2-9134-99B2F669EBF9}.Release|x86.ActiveCfg = Release|x86
-		{4B120955-3644-48F2-9134-99B2F669EBF9}.Release|x86.Build.0 = Release|x86
 		{E22263D2-BED8-40BD-9ACA-1BCD3838BA67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E22263D2-BED8-40BD-9ACA-1BCD3838BA67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E22263D2-BED8-40BD-9ACA-1BCD3838BA67}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -65,6 +53,16 @@ Global
 		{3ABEAF6C-164C-4DE2-BF24-58C8A48A8C24}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3ABEAF6C-164C-4DE2-BF24-58C8A48A8C24}.Release|x86.ActiveCfg = Release|Any CPU
 		{3ABEAF6C-164C-4DE2-BF24-58C8A48A8C24}.Release|x86.Build.0 = Release|Any CPU
+		{8DF2233B-0C71-4274-BCB5-9EA044A4EB75}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8DF2233B-0C71-4274-BCB5-9EA044A4EB75}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{8DF2233B-0C71-4274-BCB5-9EA044A4EB75}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{8DF2233B-0C71-4274-BCB5-9EA044A4EB75}.Debug|x86.ActiveCfg = Debug|x86
+		{8DF2233B-0C71-4274-BCB5-9EA044A4EB75}.Debug|x86.Build.0 = Debug|x86
+		{8DF2233B-0C71-4274-BCB5-9EA044A4EB75}.Release|Any CPU.ActiveCfg = Release|x86
+		{8DF2233B-0C71-4274-BCB5-9EA044A4EB75}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{8DF2233B-0C71-4274-BCB5-9EA044A4EB75}.Release|Mixed Platforms.Build.0 = Release|x86
+		{8DF2233B-0C71-4274-BCB5-9EA044A4EB75}.Release|x86.ActiveCfg = Release|x86
+		{8DF2233B-0C71-4274-BCB5-9EA044A4EB75}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

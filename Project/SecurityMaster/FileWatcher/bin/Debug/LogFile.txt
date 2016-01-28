@@ -1,0 +1,9 @@
+28-01-2016 17:55:13: File Watcher Service Started
+28-01-2016 17:55:22: New file found : C:\Users\admin\Desktop\SecMaster\Equities.xlsx
+28-01-2016 17:55:25: C:\Users\admin\Desktop\SecMaster\Equities.xlsx read into database successfully
+28-01-2016 17:56:27: File Watcher Service stopped
+28-01-2016 17:56:54: File Watcher Service Started
+28-01-2016 17:56:58: New file found : C:\Users\admin\Desktop\SecMaster\Equities.xlsx
+28-01-2016 17:57:01: C:\Users\admin\Desktop\SecMaster\Equities.xlsx read into database successfully
+28-01-2016 17:57:14: New file found : C:\Users\admin\Desktop\SecMaster\Bonds.xlsx
+28-01-2016 17:57:17: C:\Users\admin\Desktop\SecMaster\Bonds.xlsx read into database successfully

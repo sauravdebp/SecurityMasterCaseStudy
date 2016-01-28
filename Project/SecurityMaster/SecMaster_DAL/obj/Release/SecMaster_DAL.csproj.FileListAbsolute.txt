@@ -2,3 +2,7 @@ C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecMaster_DAL\bin\Re
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecMaster_DAL\bin\Release\SecMaster_DAL.pdb
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Release\SecMaster_DAL.dll
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Release\SecMaster_DAL.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecMaster_DAL\bin\Release\SecMaster_DAL.dll
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecMaster_DAL\bin\Release\SecMaster_DAL.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Release\SecMaster_DAL.dll
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Release\SecMaster_DAL.pdb

@@ -21,6 +21,15 @@ namespace FileWatcherService
             get { return watcher != null ? watcher.Filter : null; }
         }
 
+        public void StopFileWatcher()
+        {
+            if (watcher == null)
+                return;
+            watcher.Created -= File_Created;
+            watcher.Changed -= File_Changed;
+            watcher.Error -= File_Error;
+        }
+
         public FileWatcher(string monitorDirectory, string fileFilter)
         {
             watcher = new FileSystemWatcher(monitorDirectory, fileFilter);
@@ -32,9 +41,9 @@ namespace FileWatcherService
         {
             if (watcher == null)
                 return;
-            watcher.Created += Watcher_Created;
-            watcher.Changed += Watcher_Changed;
-            watcher.Error += Watcher_Error;
+            watcher.Created += File_Created;
+            watcher.Changed += File_Changed;
+            watcher.Error += File_Error;
         }
 
         void SetFileWatcherFilters()
@@ -49,23 +58,42 @@ namespace FileWatcherService
                 NotifyFilters.Size;
         }
 
-        private void Watcher_Error(object sender, ErrorEventArgs e)
+        private void File_Error(object sender, ErrorEventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            WriteToLog("Some error occurred");
         }
 
-        private void Watcher_Changed(object sender, FileSystemEventArgs e)
+        private void File_Changed(object sender, FileSystemEventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            WriteToLog("File Changed");
         }
 
-        private void Watcher_Created(object sender, FileSystemEventArgs e)
+        private void File_Created(object sender, FileSystemEventArgs e)
         {
             //TODO: 
             //Check file name
             //If a valid file name send it to FileReader
             //Create security objects
             //Send to DAL directly or through WCF??
+            WriteToLog("File Created");
+        }
+
+        void WriteToLog(string message)
+        {
+            StreamWriter sw = null;
+            try
+            {
+                sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\LogFile.txt", true);
+                sw.WriteLine(DateTime.Now.ToString() + ": " + message);
+                sw.Flush();
+                sw.Close();
+            }
+            catch
+            {
+
+            }
         }
     }
 }

@@ -3,3 +3,8 @@ C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\FileWatcherService\b
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\FileWatcherService\obj\x86\Release\FileWatcherService.exe
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\FileWatcherService\obj\x86\Release\FileWatcherService.pdb
 C:\Users\saura_000\Desktop\CaseStudy\Project\SecurityMaster\FileWatcherService\obj\x86\Release\FileWatcherService.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcherService\bin\Release\FileWatcherService.exe
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcherService\bin\Release\FileWatcherService.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcherService\obj\x86\Release\FileWatcherService.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcherService\obj\x86\Release\FileWatcherService.exe
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcherService\obj\x86\Release\FileWatcherService.pdb
