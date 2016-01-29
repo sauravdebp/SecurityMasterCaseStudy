@@ -21,3 +21,4 @@ C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatche
 C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Release\FileWatcher.csproj.GenerateResource.Cache
 C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Release\FileWatcher.exe
 C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\obj\x86\Release\FileWatcher.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\FileWatcher\bin\Release\FileWatcher.exe.config

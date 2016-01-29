@@ -24,7 +24,7 @@ namespace ConsoleApplication1
             //lib.OpenConnection();
             //lib.InsertSecurity(securities);
             //lib.CloseConnection();
-            lib.SelectSecurity(new Equity() { SecurityId = 1 });
+            //lib.SelectSecurity(new Equity() { SecurityId = 1 });
 
             Console.WriteLine("DONE");
             Console.ReadKey();

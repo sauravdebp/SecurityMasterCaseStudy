@@ -34,7 +34,8 @@ namespace SecurityReader
                 reader.CloseFile();
 
                 //Convert the complex dictionary to a list of security objects
-                Dictionary<string, string> attributeMapping = DAL.getDbInstance().GetAtrributeMappings(GetSecurityObject(securityName).GetType().Name);
+                //Dictionary<string, string> attributeMapping = DAL.DbInstance.GetAtrributeMappings(GetSecurityObject(securityName).GetType().Name);
+                Dictionary<string, string> attributeMapping = DAL.DbInstance.GetAtrributeMappings(GetSecurityObject(securityName).GetType().Name);
                 foreach (var securityRow in securitiesData[securityName])
                 {
                     securities.Add(FillSecurityObject(GetSecurityObject(securityName), securityRow, attributeMapping));

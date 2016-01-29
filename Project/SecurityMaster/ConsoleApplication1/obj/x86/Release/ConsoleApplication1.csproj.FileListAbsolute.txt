@@ -26,3 +26,4 @@ C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\ConsoleApp
 C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.csprojResolveAssemblyReference.cache
 C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.exe
 C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\ConsoleApplication1\obj\x86\Release\ConsoleApplication1.pdb
+C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\ConsoleApplication1\bin\Release\ConsoleApplication1.exe.config
