@@ -35,9 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SecMaster_DAL">
-      <HintPath>..\SecMaster_DAL\bin\Debug\SecMaster_DAL.dll</HintPath>
-    </Reference>
     <Reference Include="SecurityReader">
       <HintPath>..\SecurityReader\bin\Debug\SecurityReader.dll</HintPath>
     </Reference>
@@ -55,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SecMaster_DAL\SecMaster_DAL.csproj">
+      <Project>{3abeaf6c-164c-4de2-bf24-58c8a48a8c24}</Project>
+      <Name>SecMaster_DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

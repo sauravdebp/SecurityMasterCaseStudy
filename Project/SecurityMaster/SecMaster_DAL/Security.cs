@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 using System.Data;
+using System.Web.Script.Serialization;
+using System.Reflection;
 
 namespace SecMaster_DAL.DataModel
 {
@@ -33,58 +35,46 @@ namespace SecMaster_DAL.DataModel
             DAL.DbInstance.ExecuteSqlProc(procName, paramsList);
         }
 
+        //public static Security CreateSecurityFromJSON(string json)
+        //{
+            
+        //}
+
         public static Security SelectSecurityAsObject(int securityId, Type securityType)
         {
-            DataSet ds = SelectSecurityAsDataSet(securityId, securityType);
-            return null;
-        }
+            //DataSet ds = SelectSecurityAsDataSet(securityId, securityType);
+            //List<PropertyInfo> properties = new List<PropertyInfo>();
+            //properties.AddRange(securityType.BaseType.GetProperties());
+            //properties.AddRange(securityType.GetProperties());
+            //foreach(PropertyInfo property in properties)
+            //{
 
-        //Rethink about the following function
-        static DataSet GetTabAttributes(Type securityType)
-        {
-            Dictionary<string, string> paramsList = new Dictionary<string, string>();
-            paramsList.Add("@securityTypeName", securityType.Name);
-            string procName = "GetTabAttributes";
-            return DAL.DbInstance.ExecuteSqlProc_getResult(procName, paramsList);
+            //}
+            return null;
         }
 
         public static string SelectSecurityAsJSON(int securityId, Type securityType)
         {
             DataSet securityDs = SelectSecurityAsDataSet(securityId, securityType);
-            DataSet tabAttributes = GetTabAttributes(securityType);
+            DataSet tabAttributes = SecurityAttribute.GetTabAttributes(securityType);
 
             Dictionary<string, List<JsonDataAttributes>> dict = new Dictionary<string, List<JsonDataAttributes>>();
-            //Implement the foreach part
-
-            //    command = new SqlCommand();
-            //    dataAdapt = new SqlDataAdapter();
-            //    command.Connection = conn;
-            //    command.CommandType = CommandType.StoredProcedure;
-            //    command.CommandText = "GetTabAttributes";
-            //    command.Parameters.AddWithValue("@securityTypeName", SqlDbType.VarChar).Value = securityObject.GetType().Name;
-            //    dataAdapt.SelectCommand = command;
-            //    DataTable dataTable = new DataTable();
-            //    dataAdapt.Fill(dataTable);
-            //    Dictionary<string, List<JsonDataAttributes>> dict = new Dictionary<string, List<JsonDataAttributes>>();
-            //    foreach(DataRow row in dataTable.Rows)
-            //    {
-            //        string tabName=(string)row["TabName"];
-            //        if (!dict.ContainsKey(tabName))
-            //        {
-            //            dict.Add(tabName, new List<JsonDataAttributes>());
-            //        }
-            //        dict[tabName].Add(new JsonDataAttributes()
-            //        {
-            //            AttributeDisplayName = (string)row["AttributeDisplayName"],
-            //            AttributeRealName = (string)row["AttributeRealName"],
-            //            AttributeValue = datatable.Rows[0][(string)row["AttributeRealName"]]
-            //        });
-            //    }
-            //    JavaScriptSerializer serializer = new JavaScriptSerializer(); //creating serializer instance of JavaScriptSerializer class
-            //    string json = serializer.Serialize((object)dict);
-            //    return json;
-
-            return null;
+            foreach(DataRow row in tabAttributes.Tables[0].Rows)
+            {
+                string tabName = (string)row["TabName"];
+                if(!dict.ContainsKey(tabName))
+                {
+                    dict.Add(tabName, new List<JsonDataAttributes>());
+                }
+                dict[tabName].Add(new JsonDataAttributes()
+                {
+                    AttributeDisplayName = (string)row["AttributeDisplayName"],
+                    AttributeRealName = (string)row["AttributeRealName"],
+                    AttributeValue = securityDs.Tables[0].Rows[0][(string)row["AttributeRealName"]]
+                });
+            }
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            return serializer.Serialize(dict);
         }
 
         static DataSet SelectSecurityAsDataSet(int securityId, Type securityType)

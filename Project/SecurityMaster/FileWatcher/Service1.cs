@@ -12,7 +12,8 @@ namespace FileWatcher
 {
     public partial class Service1 : ServiceBase
     {
-        FileWatcher watcher = new FileWatcher(@"C:\Users\admin\Desktop\SecMaster", "*.*");
+        //FileWatcher watcher = new FileWatcher(@"C:\Users\admin\Desktop\SecMaster", "*.*");
+        FileWatcher watcher = new FileWatcher(@"C:\Users\saura_000\Desktop\SecMaster", "*.*");
 
         public Service1()
         {

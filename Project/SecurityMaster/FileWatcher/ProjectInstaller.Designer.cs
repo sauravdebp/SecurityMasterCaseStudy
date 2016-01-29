@@ -39,6 +39,7 @@
             // 
             // serviceInstaller1
             // 
+            this.serviceInstaller1.Description = "Security Master File Watcher service ";
             this.serviceInstaller1.ServiceName = "File Watcher Service";
             // 
             // ProjectInstaller

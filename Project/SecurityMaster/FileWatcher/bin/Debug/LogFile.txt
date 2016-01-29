@@ -7,3 +7,133 @@
 28-01-2016 17:57:01: C:\Users\admin\Desktop\SecMaster\Equities.xlsx read into database successfully
 28-01-2016 17:57:14: New file found : C:\Users\admin\Desktop\SecMaster\Bonds.xlsx
 28-01-2016 17:57:17: C:\Users\admin\Desktop\SecMaster\Bonds.xlsx read into database successfully
+29-01-2016 23:04:09: File Watcher Service Started
+29-01-2016 23:06:28: New file found : C:\Users\saura_000\Desktop\SecMaster\Equities.xlsx
+29-01-2016 23:06:32: Error!! External table is not in the expected format.
+29-01-2016 23:07:06: File Watcher Service stopped
+29-01-2016 23:29:13: File Watcher Service Started
+29-01-2016 23:29:29: New file found : C:\Users\saura_000\Desktop\SecMaster\Equities.xlsx
+29-01-2016 23:29:31: Error!! External table is not in the expected format.
+29-01-2016 23:29:44: File Watcher Service stopped
+30-01-2016 00:03:38: File Watcher Service Started
+30-01-2016 00:04:03: New file found : C:\Users\saura_000\Desktop\SecMaster\Equities.xlsx
+30-01-2016 00:04:06: Error!! External table is not in the expected format.
+30-01-2016 00:05:48: File Watcher Service stopped
+30-01-2016 00:06:37: File Watcher Service Started
+30-01-2016 00:06:53: New file found : C:\Users\saura_000\Desktop\SecMaster\Equities.xlsx
+30-01-2016 00:06:55: Error!! External table is not in the expected format.
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SecurityReader.ExcelReader.ReadFile() in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\ExcelReader.cs:line 28
+   at SecurityReader.SecurityReader.ReadSecuritiesFromFile(String filePath) in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\SecurityReader.cs:line 33
+   at FileWatcher.FileWatcher.File_Created(Object sender, FileSystemEventArgs e) in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\FileWatcher.cs:line 93
+30-01-2016 00:08:14: File Watcher Service stopped
+30-01-2016 00:23:25: File Watcher Service Started
+30-01-2016 00:23:38: New file found : C:\Users\saura_000\Desktop\SecMaster\Equities.xlsx
+30-01-2016 00:23:40: Error!! External table is not in the expected format.
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SecurityReader.ExcelReader.ReadFile() in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\ExcelReader.cs:line 28
+   at SecurityReader.SecurityReader.ReadSecuritiesFromFile(String filePath) in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\SecurityReader.cs:line 33
+   at FileWatcher.FileWatcher.File_Created(Object sender, FileSystemEventArgs e) in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\FileWatcher.cs:line 93
+30-01-2016 00:24:02: File Watcher Service stopped
+30-01-2016 00:28:06: File Watcher Service Started
+30-01-2016 00:28:15: New file found : C:\Users\saura_000\Desktop\SecMaster\Equities.xlsx
+30-01-2016 00:28:16: Error!! Could not find installable ISAM.
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SecurityReader.ExcelReader.ReadFile() in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\ExcelReader.cs:line 28
+   at SecurityReader.SecurityReader.ReadSecuritiesFromFile(String filePath) in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\SecurityReader.cs:line 33
+   at FileWatcher.FileWatcher.File_Created(Object sender, FileSystemEventArgs e) in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\FileWatcher.cs:line 93
+30-01-2016 00:30:18: File Watcher Service stopped
+30-01-2016 00:43:58: File Watcher Service Started
+30-01-2016 00:44:21: New file found : C:\Users\saura_000\Desktop\SecMaster\Equities.xlsx
+30-01-2016 00:44:33: Error!! External table is not in the expected format.
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SecurityReader.ExcelReader.ReadFile() in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\ExcelReader.cs:line 28
+   at SecurityReader.SecurityReader.ReadSecuritiesFromFile(String filePath) in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\SecurityReader.cs:line 33
+   at FileWatcher.FileWatcher.File_Created(Object sender, FileSystemEventArgs e) in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\FileWatcher.cs:line 93
+30-01-2016 00:45:12: File Watcher Service stopped
+30-01-2016 00:46:13: File Watcher Service Started
+30-01-2016 00:46:22: New file found : C:\Users\saura_000\Desktop\SecMaster\Equities.xlsx
+30-01-2016 00:46:25: Error!! External table is not in the expected format.
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SecurityReader.ExcelReader.ReadFile() in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\ExcelReader.cs:line 28
+   at SecurityReader.SecurityReader.ReadSecuritiesFromFile(String filePath) in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\SecurityReader.cs:line 33
+   at FileWatcher.FileWatcher.File_Created(Object sender, FileSystemEventArgs e) in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\FileWatcher.cs:line 93
+30-01-2016 00:46:51: New file found : C:\Users\saura_000\Desktop\SecMaster\Equities.xlsx
+30-01-2016 00:46:53: Error!! External table is not in the expected format.
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SecurityReader.ExcelReader.ReadFile() in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\ExcelReader.cs:line 28
+   at SecurityReader.SecurityReader.ReadSecuritiesFromFile(String filePath) in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecurityReader\SecurityReader.cs:line 33
+   at FileWatcher.FileWatcher.File_Created(Object sender, FileSystemEventArgs e) in C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\FileWatcher\FileWatcher.cs:line 93
+30-01-2016 00:47:18: File Watcher Service stopped
+30-Jan-16 12:48:41 AM: File Watcher Service Started
+30-Jan-16 12:49:02 AM: New file found : C:\Users\saura_000\Desktop\SecMaster\Equities.xlsx
+30-Jan-16 12:49:15 AM: C:\Users\saura_000\Desktop\SecMaster\Equities.xlsx read into database successfully
+30-Jan-16 12:50:34 AM: New file found : C:\Users\saura_000\Desktop\SecMaster\Bonds.xlsx
+30-Jan-16 12:50:44 AM: C:\Users\saura_000\Desktop\SecMaster\Bonds.xlsx read into database successfully
+30-Jan-16 12:51:19 AM: File Watcher Service stopped

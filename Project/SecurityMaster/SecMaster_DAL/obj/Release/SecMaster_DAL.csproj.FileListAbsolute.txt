@@ -11,3 +11,4 @@ C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecMaster_
 C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Release\SecMaster_DAL.dll
 C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Release\SecMaster_DAL.pdb
 C:\Users\admin\Desktop\SecurityMasterCaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Release\SecMaster_DAL.csprojResolveAssemblyReference.cache
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecurityMaster\SecMaster_DAL\obj\Release\SecMaster_DAL.csprojResolveAssemblyReference.cache

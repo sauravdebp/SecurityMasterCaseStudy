@@ -44,6 +44,7 @@ namespace SecurityReader
         public override bool OpenFile(string filePath)
         {
             connectionString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties = \"Excel 12.0 Xml;HDR=YES\"; ", filePath);
+            //connectionString = string.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties = \"Excel 8.0 Xml;HDR=YES\"; ", filePath);
             return true;
         }
 

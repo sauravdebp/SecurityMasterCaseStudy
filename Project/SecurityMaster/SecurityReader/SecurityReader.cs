@@ -19,9 +19,9 @@ namespace SecurityReader
 
         }
 
-        public List<Security> ReadSecuritiesFromFile(string filePath)
+        public SecurityCollection ReadSecuritiesFromFile(string filePath)
         {
-            List<Security> securities = new List<Security>();
+            SecurityCollection securities = new SecurityCollection();
             string securityName = Path.GetFileNameWithoutExtension(filePath);
             Dictionary<string, List<Dictionary<string, string>>> securitiesData = new Dictionary<string, List<Dictionary<string, string>>>();
             if(File.Exists(filePath))
@@ -34,8 +34,7 @@ namespace SecurityReader
                 reader.CloseFile();
 
                 //Convert the complex dictionary to a list of security objects
-                //Dictionary<string, string> attributeMapping = DAL.DbInstance.GetAtrributeMappings(GetSecurityObject(securityName).GetType().Name);
-                Dictionary<string, string> attributeMapping = DAL.DbInstance.GetAtrributeMappings(GetSecurityObject(securityName).GetType().Name);
+                Dictionary<string, string> attributeMapping = SecurityAttribute.GetAttributeMappings(GetSecurityObject(securityName).GetType());
                 foreach (var securityRow in securitiesData[securityName])
                 {
                     securities.Add(FillSecurityObject(GetSecurityObject(securityName), securityRow, attributeMapping));

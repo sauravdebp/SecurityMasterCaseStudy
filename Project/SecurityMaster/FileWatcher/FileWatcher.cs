@@ -90,16 +90,12 @@ namespace FileWatcher
             WriteToLog("New file found : " + e.FullPath);
             try
             {
-                List<Security> securities = reader.ReadSecuritiesFromFile(e.FullPath);
-                DAL dalLib = DAL.getDbInstance();
-                dalLib.OpenConnection();
-                dalLib.InsertSecurity(securities);
-                dalLib.CloseConnection();
+                reader.ReadSecuritiesFromFile(e.FullPath).PersistCollection();
                 WriteToLog(e.FullPath + " read into database successfully");
             }
             catch (Exception ex)
             {
-                WriteToLog("Error!! " + ex.Message);
+                WriteToLog("Error!! " + ex.Message + "\n" + ex.StackTrace);
             }
         }
 
