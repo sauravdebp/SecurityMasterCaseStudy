@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Example of Bootstrap 3 Horizontal Form Layout</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+	/* Fix alignment issue of label on extra small devices in Bootstrap 3.2 */
+    .form-horizontal .control-label{
+        padding-top: 7px;
+    }
+	
+	.heading{
+		display:inline-block;
+
+	}
+	
+</style>
+</head>
+<body>
+	<header role="banner">
+		<img id="logo-main" src="logo.png" width="200" alt="Logo Thing main logo">
+	</header>
+	<nav class="navbar navbar-inverse navbar-default">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Create Security<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#" onclick='CreateSecurity("Equity")'>Equity</a></li>
+						<li><a href="#" onclick='CreateSecurity("CorporateBond")'>Corporate Bond</a></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Update Security<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Equity</a></li>
+						<li><a href="#">Corporate Bond</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container-fluid">    
+		<form class="form-horizontal" id="CreateSection"></form>
+	</div>
+<script>
+	var baseUrl = "http://localhost:49802/RestService.svc/";
+	function CreateSecurity(secType){
+		var url = baseUrl + "CreateSecurity?secType=" + secType;
+		$.ajax({
+			type: "GET",
+			url: url,
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function(json) {
+				createForm(json, 'Create ' + json.SecurityTypeName);
+			},
+			error: function() {
+				alert("Something happened. That something ain't good!!");
+			}
+		});
+	}
+	var globalJson;
+	function ViewSecurity(secType, secId){
+		var url = baseUrl + "ViewSecurity?secType=" + secType + "&secId=" + secId;
+		$.ajax({
+			type: "GET",
+			url: url,
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function(json) {
+				globalJson = json;
+				createForm(json, 'View ' + json.SecurityTypeName);
+			},
+			error: function() {
+				alert("Something happened. That something ain't good!!");
+			}
+		});
+	}
+	
+	function AddSecurity(json)
+	{
+		var url = baseUrl + "AddSecurity";
+		$.ajax({
+			type: "POST",
+			url: url,
+			contentType: "application/json; charset=utf-8",
+			data: JSON.stringify(json),
+			dataType: "json",
+			success: function(result) {
+				if(result != "true")
+					alert(result);
+			},
+			error: function() {
+				alert("Something happened. That something ain't good!!");
+			}
+		});
+	}
+	
+	function UpdateSecurity(json)
+	{
+		var url = baseUrl + "UpdateSecurity";
+		$.ajax({
+			type: "PUT",
+			url: url,
+			contentType: "application/json; charset=utf-8",
+			data: JSON.stringify(json),
+			dataType: "json",
+			success: function(result) {
+				if(result != "true")
+					alert(result);
+			},
+			error: function() {
+				alert("Something happened. That something ain't good!!");
+			}
+		});
+	}
+
+	function createForm(json, headerContent) {
+		var html = '<h1>' + headerContent +'</h1>';
+		$.each(json.TabList,function(key,val)
+		{
+			html+= '<div id = "tab_'+val.TabName +'"> <legend class="form-signin-heading">'+val.TabName+'</legend>';
+			var nAttrs = val.Attributes.length;
+			$.each(val.Attributes,function(k,v)
+			{
+				if(nAttrs == val.Attributes.length || nAttrs == Math.floor(val.Attributes.length / 2))
+				{
+					html += '<div class="col-md-6">';
+				}
+				if (v.AttributeType == "DateTime")
+				{
+					html+= '<div class="form-group"> <div id = "attr_'+v.attributeName+'"><label class="control-label  col-xs-2">'+v.attributeName+'<label> </div> <div class="col-xs-3"> '+
+					' <div class="input-group date" id="datetimepicker1"><input class="form-control" type="text" name="kk" ><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span></div></div></div>'
+				}
+				else
+				{
+					if(v.AttributeValue == null)
+						v.AttributeValue = "";
+					html+= '<div class="form-group"><div id = "attr_'+v.AttributeDisplayName+'"><label class="control-label  col-xs-2">'+v.AttributeDisplayName+'<label> </div> <div class="col-xs-3"><input class="form-control" type="text" name="kk" value ="'+v.AttributeValue+'"></div></div>'
+				}
+				if(nAttrs == Math.floor(val.Attributes.length / 2) + 1 || nAttrs == 1)
+				{
+					html += '</div>';
+				}
+				nAttrs--;
+			});
+			html+='</div>'
+		});
+		$("#CreateSection").html("");
+		$("#CreateSection").append(html);
+	}
+	//$(function () {
+		//$("#datetimepicker1").data("DateTimePicker").FUNCTION();
+	//});
+</script>
+</body>
+</html>                                 		
