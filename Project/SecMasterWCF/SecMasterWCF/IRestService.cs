@@ -34,11 +34,11 @@ namespace SecMasterWCF
 
         [WebInvoke(Method = "POST", UriTemplate = "AddSecurity", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
         [OperationContract]
-        void AddSecurity(string json);
+        string AddSecurity(Json_Tabs json);
 
-        //[WebInvoke(Method = "PUT", UriTemplate = "EmployeePUT", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
-        //[OperationContract]
-        //void UpdateEmployee(Employee newEmp);
+        [WebInvoke(Method = "PUT", UriTemplate = "UpdateSecurity", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        [OperationContract]
+        string UpdateSecurity(Json_Tabs json);
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "Employee/{empId}", ResponseFormat = WebMessageFormat.Json)]
         //[OperationContract]

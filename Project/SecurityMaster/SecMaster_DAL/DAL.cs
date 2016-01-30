@@ -49,8 +49,14 @@ namespace SecMaster_DAL
             OpenConnection();
             SqlDataAdapter da = new SqlDataAdapter(query, conn);
             DataSet ds = new DataSet();
-            da.Fill(ds);
-            CloseConnection();
+            try
+            {
+                da.Fill(ds);
+            }
+            finally
+            {
+                CloseConnection();
+            }
             return ds;
         }
 
@@ -58,13 +64,19 @@ namespace SecMaster_DAL
         {
             OpenConnection();
             SqlCommand cmd = new SqlCommand(procName, conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            foreach (var param in procParams)
+            try
             {
-                cmd.Parameters.AddWithValue(param.Key, param.Value);
+                cmd.CommandType = CommandType.StoredProcedure;
+                foreach (var param in procParams)
+                {
+                    cmd.Parameters.AddWithValue(param.Key, param.Value);
+                }
+                cmd.ExecuteNonQuery();
             }
-            cmd.ExecuteNonQuery();
-            CloseConnection();
+            finally
+            {
+                CloseConnection();
+            }
         }
 
         public DataSet ExecuteSqlProc_getResult(string procName, Dictionary<string, string> procParams)
@@ -73,13 +85,19 @@ namespace SecMaster_DAL
             SqlCommand cmd = new SqlCommand(procName, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-            cmd.CommandType = CommandType.StoredProcedure;
-            foreach (var param in procParams)
+            try
             {
-                cmd.Parameters.AddWithValue(param.Key, param.Value);
+                cmd.CommandType = CommandType.StoredProcedure;
+                foreach (var param in procParams)
+                {
+                    cmd.Parameters.AddWithValue(param.Key, param.Value);
+                }
+                da.Fill(ds);
             }
-            da.Fill(ds);
-            CloseConnection();
+            finally
+            {
+                CloseConnection();
+            }
             return ds;
         }
     }

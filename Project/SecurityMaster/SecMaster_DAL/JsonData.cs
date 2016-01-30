@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using SecMaster_DAL.DataModel;
@@ -25,11 +26,26 @@ namespace SecMaster_DAL
             {
                 secObj = new CorporateBond();
             }
+            
             foreach(var tab in TabList)
             {
                 foreach(var att in tab.Attributes)
                 {
-                    secObj.GetType().GetProperty(att.AttributeRealName).SetValue(secObj, att.AttributeValue, null);
+                    Type propertyType = secObj.GetType().GetProperty(att.AttributeRealName).PropertyType;
+                    //Following if part is to handle conversion of nullable types (eg. int?)
+                    if (propertyType.IsGenericType && propertyType.GetGenericTypeDefinition().Equals(typeof(Nullable<>)))
+                    {
+                        propertyType = Nullable.GetUnderlyingType(propertyType);
+                    }
+                    //TODO: Find a way to convert the date strings from excel into SqlDateTime properly. Below statement is temporarily placed to avoid using the Date attributes.
+                    if (propertyType == typeof(SqlDateTime))
+                        continue;
+                    if(att.AttributeValue != null)
+                        secObj.GetType().GetProperty(att.AttributeRealName).SetValue(
+                            secObj, 
+                            Convert.ChangeType(att.AttributeValue, propertyType), 
+                            null
+                        );
                 }
             }
             return secObj;
