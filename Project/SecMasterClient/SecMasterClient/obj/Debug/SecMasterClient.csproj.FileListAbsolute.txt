@@ -1,0 +1,5 @@
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecMasterClient\SecMasterClient\bin\SecMasterClient.dll.config
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecMasterClient\SecMasterClient\bin\SecMasterClient.dll
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecMasterClient\SecMasterClient\bin\SecMasterClient.pdb
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecMasterClient\SecMasterClient\obj\Debug\SecMasterClient.dll
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecMasterClient\SecMasterClient\obj\Debug\SecMasterClient.pdb

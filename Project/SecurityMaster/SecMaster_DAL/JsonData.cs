@@ -2,33 +2,55 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SecMaster_DAL.DataModel;
 
 namespace SecMaster_DAL
 {
-    class JsonData
+    public class Json_Tabs
     {
-        public List<JsonDataTab> Tabs { get; set; }
-        public JsonData()
+        public string SecurityTypeName { get; set; }
+        public List<Json_Tab> TabList { get; set; }
+        public Json_Tabs()
         {
-            Tabs = new List<JsonDataTab>();
+            TabList = new List<Json_Tab>();
+        }
+        public Security ConvertToSecurityObject()
+        {
+            Security secObj = null;
+            if(SecurityTypeName == typeof(Equity).Name)
+            {
+                secObj = new Equity();
+            }
+            else if(SecurityTypeName == typeof(CorporateBond).Name)
+            {
+                secObj = new CorporateBond();
+            }
+            foreach(var tab in TabList)
+            {
+                foreach(var att in tab.Attributes)
+                {
+                    secObj.GetType().GetProperty(att.AttributeRealName).SetValue(secObj, att.AttributeValue, null);
+                }
+            }
+            return secObj;
         }
     }
 
-    class JsonDataTab
+    public class Json_Tab
     {
         public string TabName { get; set; }
-        public List<JsonDataAttributes> Attributes { get; set; }
-        public JsonDataTab()
+        public List<Json_TabAttribute> Attributes { get; set; }
+        public Json_Tab()
         {
-            Attributes = new List<JsonDataAttributes>();
+            Attributes = new List<Json_TabAttribute>();
         }
     }
 
-    class JsonDataAttributes
+    public class Json_TabAttribute
     {
         public string AttributeDisplayName { get; set; }
         public string AttributeRealName { get; set; }
-        public object AttributeValue { get; set; }
+        public string AttributeValue { get; set; }
         public string AttributeType { get; set; }
     }
 }

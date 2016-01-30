@@ -53,28 +53,38 @@ namespace SecMaster_DAL.DataModel
             return null;
         }
 
-        public static string SelectSecurityAsJSON(int securityId, Type securityType)
+        public static Json_Tabs SelectSecurityAsJSON(int securityId, Type securityType)
         {
             DataSet securityDs = SelectSecurityAsDataSet(securityId, securityType);
+            int secRows = securityDs.Tables[0].Rows.Count;
             DataSet tabAttributes = SecurityAttribute.GetTabAttributes(securityType);
 
-            Dictionary<string, List<JsonDataAttributes>> dict = new Dictionary<string, List<JsonDataAttributes>>();
+            Dictionary<string, List<Json_TabAttribute>> dict = new Dictionary<string, List<Json_TabAttribute>>();
+            Json_Tabs tabs = new Json_Tabs();
             foreach(DataRow row in tabAttributes.Tables[0].Rows)
             {
                 string tabName = (string)row["TabName"];
                 if(!dict.ContainsKey(tabName))
                 {
-                    dict.Add(tabName, new List<JsonDataAttributes>());
+                    dict.Add(tabName, new List<Json_TabAttribute>());
                 }
-                dict[tabName].Add(new JsonDataAttributes()
+                dict[tabName].Add(new Json_TabAttribute()
                 {
                     AttributeDisplayName = (string)row["AttributeDisplayName"],
                     AttributeRealName = (string)row["AttributeRealName"],
-                    AttributeValue = securityDs.Tables[0].Rows[0][(string)row["AttributeRealName"]]
+                    AttributeValue = secRows == 1 ? securityDs.Tables[0].Rows[0][(string)row["AttributeRealName"]].ToString() : null
                 });
             }
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            return serializer.Serialize(dict);
+
+            foreach(var tabAtts in dict)
+            {
+                tabs.TabList.Add(new Json_Tab() { TabName = tabAtts.Key, Attributes=tabAtts.Value });
+            }
+            tabs.SecurityTypeName = securityType.Name;
+            //JavaScriptSerializer serializer = new JavaScriptSerializer();
+            //return serializer.Serialize(dict);
+            //return dict;
+            return tabs;
         }
 
         static DataSet SelectSecurityAsDataSet(int securityId, Type securityType)

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    Enter something <input id="txt" type="text" /><button>Get WCF data</button>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                alert("clicked");
+                var data = $("#txt").val();
+                var postdata = {};
+                var data_obj = { "BoolValue": "true", "StringValue": data }
+                postdata["value"] = data_obj;
+
+                var url = "http://localhost:49802/RestService.svc/CreateSecurity?secType=" + $("#txt").val();
+                $.ajax({
+                    type: "GET",
+                    url: url,
+                    contentType: "application/json; charset=utf-8",
+                    //data: $("#txt").val(),
+                    dataType: "json",
+                    success: function (data) { console.log(data); },
+                    error: function (a, b, c) { console.log(a); }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecMasterWCF\SecMasterWCF\bin\SecMasterWCF.dll.config
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecMasterWCF\SecMasterWCF\bin\SecMasterWCF.dll
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecMasterWCF\SecMasterWCF\bin\SecMasterWCF.pdb
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecMasterWCF\SecMasterWCF\obj\Debug\SecMasterWCF.csprojResolveAssemblyReference.cache
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecMasterWCF\SecMasterWCF\obj\Debug\SecMasterWCF.dll
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecMasterWCF\SecMasterWCF\obj\Debug\SecMasterWCF.pdb
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecMasterWCF\SecMasterWCF\bin\SecMaster_DAL.dll
+C:\Users\saura_000\OneDrive\Projects\CaseStudy\Project\SecMasterWCF\SecMasterWCF\bin\SecMaster_DAL.pdb
