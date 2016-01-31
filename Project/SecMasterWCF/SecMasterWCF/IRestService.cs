@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using SecMaster_DAL;
 using System.Text;
+using SecMaster_DAL.DataModel;
 
 namespace SecMasterWCF
 {
@@ -31,6 +32,10 @@ namespace SecMasterWCF
         [WebGet(UriTemplate = "ViewSecurity?secType={secType}&secId={secId}", ResponseFormat = WebMessageFormat.Json)]
         [OperationContract]
         Json_Tabs ViewSecurity(string secType, string secId);
+
+        [WebGet(UriTemplate = "SearchSecurity?secType={secType}&secName={secName}", ResponseFormat = WebMessageFormat.Json)]
+        [OperationContract]
+        SecurityCollection SearchSecurity(string secType, string secName);
 
         [WebInvoke(Method = "POST", UriTemplate = "AddSecurity", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
         [OperationContract]

@@ -44,6 +44,16 @@ namespace SecMasterWCF
             return tabs;
         }
 
+        public SecurityCollection SearchSecurity(string secType, string secName)
+        {
+            Type securityType = null;
+            if (secType == typeof(Equity).Name)
+                securityType = typeof(Equity);
+            else if (secType == typeof(CorporateBond).Name)
+                securityType = typeof(CorporateBond);
+            return SecurityCollection.GetSecuritiesByName(secName, securityType);
+        }
+
         public string UpdateSecurity(Json_Tabs json)
         {
             try

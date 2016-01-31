@@ -5,6 +5,7 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
+using System.Data;
 
 namespace SecMaster_DAL.DataModel
 {
@@ -43,6 +44,22 @@ namespace SecMaster_DAL.DataModel
                 xmlDoc.Load(xmlStream);
                 return xmlDoc.InnerXml;
             }
+        }
+
+        public static SecurityCollection GetSecuritiesByName(string secName, Type securityType)
+        {
+            SecurityCollection matchingSecs = new SecurityCollection();
+            string query = string.Format("SELECT SecurityId, Name FROM {0} WHERE Name LIKE '%{1}%'", securityType.Name, secName);
+            DataTable result = DAL.DbInstance.ExecuteSqlQuery(query).Tables[0];
+            foreach(DataRow row in result.Rows)
+            {
+                matchingSecs.Add(new Security()
+                {
+                    Name = (string)row["Name"],
+                    SecurityId = Convert.ToInt32(row["SecurityId"])
+                });
+            }
+            return matchingSecs;
         }
     }
 }

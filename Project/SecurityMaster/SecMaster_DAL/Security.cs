@@ -11,7 +11,7 @@ namespace SecMaster_DAL.DataModel
 {
     [XmlInclude(typeof(Equity))]
     [XmlInclude(typeof(CorporateBond))]
-    [Serializable]
+    //[Serializable]
     public class Security
     {
         [XmlElement(IsNullable = true)]

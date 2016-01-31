@@ -8,6 +8,7 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+<!--<script src="typeahead.bundle.js"></script> -->
 <style type="text/css">
     .bs-example{
     	margin: 20px;
@@ -39,21 +40,67 @@
 						<li><a href="#" onclick='CreateSecurity("CorporateBond")'>Corporate Bond</a></li>
 					</ul>
 				</li>
-				<li class="dropdown">
+				<li>
+					<a href="#" id="saveBtn" style="display: none;" data-behavior>Save Changes</a>
+				</li>
+				<!--<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Update Security<span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="#">Equity</a></li>
 						<li><a href="#">Corporate Bond</a></li>
 					</ul>
+				</li>-->
+				<li>
+					<div class="input-group">
+						<input type="text" id="searchSecurity" class="form-control" placeholder="Search Security">
+						<span class="input-group-btn">
+							<input type="radio" class="secTypeRadio" data-secType="Equity" checked name="secType">
+						</span>
+						<span class="input-group-btn">
+							<input type="radio" class="secTypeRadio" data-secType="CorporateBond" name="secType">
+						</span>
+						<span class="input-group-btn">
+							<button class="btn btn-default" id="searchBtn" type="button">Go!</button>
+						</span>
+					</div>
 				</li>
 			</ul>
 		</div>
 	</nav>
 	<div class="container-fluid">    
+		<div class="list-group" id="SearchResultsSection"></div>
 		<form class="form-horizontal" id="CreateSection"></form>
 	</div>
 <script>
+	var globalJson;
 	var baseUrl = "http://localhost:49802/RestService.svc/";
+	var selectedSearchSecType = "Equity";
+	
+	$("#searchBtn").click(function() {
+		SearchSecurity(selectedSearchSecType, $("#searchSecurity").val());
+		$("#CreateSection").html("");
+	});
+	
+	$(".secTypeRadio").change(function(){
+		selectedSearchSecType = $(this).attr("data-secType");
+	});
+	
+	$("#saveBtn").click(function() {
+		var behavior = $(this).attr("data-behavior");
+		if(behavior == null)
+		{
+			alert("Save button behavior not known!");
+		}
+		else if(behavior == "AddSecurity")
+		{
+			AddSecurity(globalJson);
+		}
+		else if(behavior == "UpdateSecurity")
+		{
+			UpdateSecurity(globalJson);
+		}
+	});
+	
 	function CreateSecurity(secType){
 		var url = baseUrl + "CreateSecurity?secType=" + secType;
 		$.ajax({
@@ -61,16 +108,18 @@
 			url: url,
 			contentType: "application/json; charset=utf-8",
 			dataType: "json",
-			success: function(json) {
+			success: function(json) {	
+				globalJson = json;
 				createForm(json, 'Create ' + json.SecurityTypeName);
+				$("#saveBtn").attr("data-behavior", "AddSecurity");
 			},
 			error: function() {
 				alert("Something happened. That something ain't good!!");
 			}
 		});
 	}
-	var globalJson;
-	function ViewSecurity(secType, secId){
+	
+	function ViewSecurity(secType, secId) {
 		var url = baseUrl + "ViewSecurity?secType=" + secType + "&secId=" + secId;
 		$.ajax({
 			type: "GET",
@@ -80,6 +129,7 @@
 			success: function(json) {
 				globalJson = json;
 				createForm(json, 'View ' + json.SecurityTypeName);
+				$("#saveBtn").attr("data-behavior", "UpdateSecurity");
 			},
 			error: function() {
 				alert("Something happened. That something ain't good!!");
@@ -87,8 +137,7 @@
 		});
 	}
 	
-	function AddSecurity(json)
-	{
+	function AddSecurity(json) {
 		var url = baseUrl + "AddSecurity";
 		$.ajax({
 			type: "POST",
@@ -99,6 +148,8 @@
 			success: function(result) {
 				if(result != "true")
 					alert(result);
+				else
+					alert("New security added successfully!");
 			},
 			error: function() {
 				alert("Something happened. That something ain't good!!");
@@ -106,8 +157,7 @@
 		});
 	}
 	
-	function UpdateSecurity(json)
-	{
+	function UpdateSecurity(json) {
 		var url = baseUrl + "UpdateSecurity";
 		$.ajax({
 			type: "PUT",
@@ -118,6 +168,24 @@
 			success: function(result) {
 				if(result != "true")
 					alert(result);
+				else
+					alert("Security updated successfully!");
+			},
+			error: function() {
+				alert("Something happened. That something ain't good!!");
+			}
+		});
+	}
+	
+	function SearchSecurity(secType, secName) {
+		var url = baseUrl + "SearchSecurity?secType=" + secType + "&secName=" + secName;
+		$.ajax({
+			type: "GET",
+			url: url,
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			success: function(json) {
+				createSearchResults(json);
 			},
 			error: function() {
 				alert("Something happened. That something ain't good!!");
@@ -126,6 +194,9 @@
 	}
 
 	function createForm(json, headerContent) {
+		$("#saveBtn").hide();
+		$("#SearchResultsSection").html("");
+		$("#searchSecurity").val();
 		var html = '<h1>' + headerContent +'</h1>';
 		$.each(json.TabList,function(key,val)
 		{
@@ -146,18 +217,46 @@
 				{
 					if(v.AttributeValue == null)
 						v.AttributeValue = "";
-					html+= '<div class="form-group"><div id = "attr_'+v.AttributeDisplayName+'"><label class="control-label  col-xs-2">'+v.AttributeDisplayName+'<label> </div> <div class="col-xs-3"><input class="form-control" type="text" name="kk" value ="'+v.AttributeValue+'"></div></div>'
+					html+= '<div class="form-group"><div id = "attr_'+v.AttributeDisplayName+'"><label class="control-label  col-xs-2">'+v.AttributeDisplayName+'<label> </div> <div class="col-xs-3"><input class="form-control jsonField" data-tabIndex="' + key + '" data-attrIndex="' + k + '" type="text" name="kk" value ="'+v.AttributeValue+'"></div></div>'
 				}
 				if(nAttrs == Math.floor(val.Attributes.length / 2) + 1 || nAttrs == 1)
 				{
 					html += '</div>';
 				}
 				nAttrs--;
+				if(v.AttributeRealName == "Name")
+					$("#searchSecurity").val(v.AttributeValue);
 			});
 			html+='</div>'
 		});
 		$("#CreateSection").html("");
 		$("#CreateSection").append(html);
+		$(".jsonField").unbind('change');
+		$(".jsonField").change(function() {
+				var tabIndex = $(this).attr("data-tabIndex");
+				var attrIndex = $(this).attr("data-attrIndex");
+				globalJson.TabList[tabIndex].Attributes[attrIndex].AttributeValue = $(this).val();
+				$("#saveBtn").show();
+			});
+	}
+	
+	function createSearchResults(json) {
+		var html = '';
+		if(json.SecuritiesList.length == 0)
+			html += '<a href="#" class="list-group-item">No results found!</a>';
+		else if(json.SecuritiesList.length == 1)
+		{
+			ViewSecurity(selectedSearchSecType, json.SecuritiesList[0].SecurityId);
+			return;
+		}
+		$.each(json.SecuritiesList, function(key, val){
+			html += '<a href="#" class="list-group-item searchResult" data-secId="' + val.SecurityId +'">' + val.Name + '</a>';
+		});
+		$("#SearchResultsSection").html(html);
+		$(".searchResult").click(function() {
+			$(".searchResult").unbind('click');
+			ViewSecurity(selectedSearchSecType, $(this).attr("data-secId"));
+		});
 	}
 	//$(function () {
 		//$("#datetimepicker1").data("DateTimePicker").FUNCTION();

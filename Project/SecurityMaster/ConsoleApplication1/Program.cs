@@ -23,7 +23,8 @@ namespace ConsoleApplication1
             //lib.InsertSecurity(securities);
             //lib.CloseConnection();
             //lib.SelectSecurity(new Equity() { SecurityId = 1 });
-            var tabs = Security.SelectSecurityAsJSON(1, typeof(Equity));
+            //var tabs = Security.SelectSecurityAsJSON(1, typeof(Equity));
+            //SecurityCollection.GetSecuritiesByName("A", typeof(Equity));
             Console.WriteLine("DONE");
             Console.ReadKey();
         }
